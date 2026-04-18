@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/users",
+  baseURL: "https://valentine-proposal-project.onrender.com/api/users",
 });
 
 
