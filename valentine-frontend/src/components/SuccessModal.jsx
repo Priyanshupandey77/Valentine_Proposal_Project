@@ -2,37 +2,6 @@ function SuccessModal({ show, link, onClose }) {
   if (!show) return null;
 
   return (
-    // <div
-    //   style={{
-    //     position: "fixed",
-    //     top: 0,
-    //     left: 0,
-    //     width: "100%",
-    //     height: "100%",
-    //     background: "rgba(0,0,0,0.5)",
-    //   }}
-    // >
-    //   <div
-    //     style={{
-    //       background: "white",
-    //       padding: "20px",
-    //       margin: "100px auto",
-    //       width: "300px",
-    //       textAlign: "center",
-    //     }}
-    //   >
-    //     <h2>Link Generated 🎉</h2>
-    //     <p>{link}</p>
-
-    //     <button onClick={() => navigator.clipboard.writeText(link)}>
-    //       Copy
-    //     </button>
-
-    //     <br />
-    //     <br />
-    //     <button onClick={onClose}>Close</button>
-    //   </div>
-    // </div>
 
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="bg-white/95 w-90 rounded-2xl p-6 text-center shadow-2xl animate-pop">

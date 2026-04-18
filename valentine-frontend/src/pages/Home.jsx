@@ -15,7 +15,7 @@ function Home() {
         gender,
       });
 
-      const url = `http://localhost:5173/generate/${data.user.userId}`;
+      const url = `https://valentine-proposal-project-amber.vercel.app/generate/${data.user.userId}`;
       setLink(url);
       setShowModal(true);
     } catch (error) {
@@ -25,43 +25,6 @@ function Home() {
   };
 
   return (
-    // <div className="min-h-screen flex items-center justify-center bg-pink-100">
-    //   <div className="bg-white p-8 rounded-2xl shadow-xl w-96 text-center">
-    //     <h1 className="text-2xl font-bold text-primary mb-6">
-    //       Create Proposal 💕
-    //     </h1>
-
-    //     <input
-    //       className="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300"
-    //       placeholder="Enter name"
-    //       value={name}
-    //       onChange={(e) => setName(e.target.value)}
-    //     />
-
-    //     <select
-    //       className="w-full p-3 border rounded-lg mb-6"
-    //       onChange={(e) => setGender(e.target.value)}
-    //     >
-    //       <option value="">Select Gender</option>
-    //       <option value="male">Male</option>
-    //       <option value="female">Female</option>
-    //     </select>
-
-    //     <button
-    //       onClick={handleGenerate}
-    //       className="w-full bg-primary text-white py-3 rounded-lg font-bold hover:scale-105 transition"
-    //     >
-    //       Generate 💖
-    //     </button>
-    //   </div>
-
-    //   <SuccessModal
-    //     link={link}
-    //     show={showModal}
-    //     onClose={() => setShowModal(false)}
-    //   />
-    // </div>
-
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-pink-100 via-rose-100 to-pink-200">
       <div className="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-2xl w-96 text-center border border-pink-200">
         <h1 className="text-3xl font-extrabold text-pink-500 mb-6 tracking-wide">
