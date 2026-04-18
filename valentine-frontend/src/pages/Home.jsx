@@ -62,7 +62,7 @@ function Home() {
     //   />
     // </div>
 
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-rose-100 to-pink-200">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-pink-100 via-rose-100 to-pink-200">
       <div className="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-2xl w-96 text-center border border-pink-200">
         <h1 className="text-3xl font-extrabold text-pink-500 mb-6 tracking-wide">
           Create Proposal 💕
