@@ -6,7 +6,7 @@ function Home() {
   const [name, setName] = useState("");
   const [gender, setGender] = useState("");
   const [link, setLink] = useState("");
-  const [showmodal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleGenerate = async () => {
     try {
@@ -25,28 +25,82 @@ function Home() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1>Create Proposal 💕</h1>
+    // <div className="min-h-screen flex items-center justify-center bg-pink-100">
+    //   <div className="bg-white p-8 rounded-2xl shadow-xl w-96 text-center">
+    //     <h1 className="text-2xl font-bold text-primary mb-6">
+    //       Create Proposal 💕
+    //     </h1>
 
-      <input
-        placeholder="Enter name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+    //     <input
+    //       className="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300"
+    //       placeholder="Enter name"
+    //       value={name}
+    //       onChange={(e) => setName(e.target.value)}
+    //     />
+
+    //     <select
+    //       className="w-full p-3 border rounded-lg mb-6"
+    //       onChange={(e) => setGender(e.target.value)}
+    //     >
+    //       <option value="">Select Gender</option>
+    //       <option value="male">Male</option>
+    //       <option value="female">Female</option>
+    //     </select>
+
+    //     <button
+    //       onClick={handleGenerate}
+    //       className="w-full bg-primary text-white py-3 rounded-lg font-bold hover:scale-105 transition"
+    //     >
+    //       Generate 💖
+    //     </button>
+    //   </div>
+
+    //   <SuccessModal
+    //     link={link}
+    //     show={showModal}
+    //     onClose={() => setShowModal(false)}
+    //   />
+    // </div>
+
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-rose-100 to-pink-200">
+      <div className="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-2xl w-96 text-center border border-pink-200">
+        <h1 className="text-3xl font-extrabold text-pink-500 mb-6 tracking-wide">
+          Create Proposal 💕
+        </h1>
+
+        <input
+          className="w-full p-3 border border-pink-200 rounded-xl mb-4 
+      focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent
+      transition duration-200 placeholder:text-gray-400"
+          placeholder="Enter name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <select
+          className="w-full p-3 border border-pink-200 rounded-xl mb-6 
+      focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-200"
+          onChange={(e) => setGender(e.target.value)}
+        >
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <button
+          onClick={handleGenerate}
+          className="w-full bg-linear-to-r from-pink-400 to-rose-500 text-white py-3 rounded-xl font-semibold 
+      shadow-lg hover:shadow-pink-300/50 hover:scale-105 active:scale-95 transition-all duration-300"
+        >
+          Generate 💖
+        </button>
+      </div>
+
+      <SuccessModal
+        link={link}
+        show={showModal}
+        onClose={() => setShowModal(false)}
       />
-      <br />
-      <br />
-
-      <select onChange={(e) => setGender(e.target.value)}>
-        <option value="">Select Gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-
-      <br />
-      <br />
-      <button onClick={handleGenerate}>Generate</button>
-
-      <SuccessModal link={link} show={showmodal} onClose={false} />
     </div>
   );
 }
