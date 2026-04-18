@@ -13,6 +13,10 @@ app.use(express.json());
 
 connectedDB();
 
+app.get("/", (req, res) => {
+  res.send("API is running!!");
+});
+
 app.use("/api/users", userRoutes );
 
 const PORT = process.env.PORT || 5000;
