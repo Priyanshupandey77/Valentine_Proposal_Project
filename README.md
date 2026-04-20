@@ -8,8 +8,7 @@ Built using the **MERN stack**, this project combines playful UI/UX, animations,
 
 ## 🚀 Live Demo
 
-🌐 Frontend: https://valentine-proposal-project-amber.vercel.app
-🔗 Backend: https://valentine-proposal-project.onrender.com
+🌐 Live App: https://valentine-proposal-project-amber.vercel.app
 
 ---
 
@@ -21,7 +20,6 @@ Built using the **MERN stack**, this project combines playful UI/UX, animations,
 * 📱 Mobile-friendly behavior with GIF reactions
 * 🎥 Dynamic GIF animations
 * 💕 Floating hearts animation on acceptance
-* 🎵 Sound effects on "Yes" click
 * 📊 Tracks acceptance in database
 * 💬 WhatsApp share integration
 * 🔗 Copy-to-clipboard with feedback
