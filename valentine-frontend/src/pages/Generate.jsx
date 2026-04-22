@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import API from "../api/api";
 import Proposal from "../components/Proposal";
 import SuccessScreen from "../components/SuccessScreen";
+import Auth from "./Auth";
 
 function Generate() {
   const { userId } = useParams();
