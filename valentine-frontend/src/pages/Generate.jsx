@@ -7,7 +7,8 @@ import SuccessScreen from "../components/SuccessScreen";
 function Generate() {
   const { userId } = useParams();
   const [user, setUser] = useState(null);
-   const [showSuccess, setShowSuccess] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -23,6 +24,10 @@ function Generate() {
   };
 
   if (!user) return <h2>Loading...</h2>;
+
+  if (!isVerified) {
+    return <Auth userId={userId} onSuccess={() => setIsVerified(true)} />;
+  }
 
   return (
     <div>
