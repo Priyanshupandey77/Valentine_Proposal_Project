@@ -23,6 +23,7 @@ Built using the **MERN stack**, this project combines playful UI/UX, animations,
 * 📊 Tracks acceptance in database
 * 💬 WhatsApp share integration
 * 🔗 Copy-to-clipboard with feedback
+* Auth system
 
 ---
 
