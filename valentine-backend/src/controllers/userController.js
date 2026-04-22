@@ -28,6 +28,31 @@ export const generateProposal = async (req, res) => {
   }
 };
 
+//Auth for Proposal
+export const verifyUser = async (req, res) => {
+  try {
+    const { userId, name } = req.body;
+
+    const user = await User.findById(userId);
+
+    if (!user) {
+      return res
+        .status(401)
+        .json({ success: false, message: "User not found" });
+    }
+    //case-insenstive match
+    if (
+      user.name.toLocaleLowerCase().trim() !== name.toLocaleLowerCase().trim()
+    ) {
+      return res.json(401).json({ message: "Wrong name" });
+    }
+
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
 //fetch user
 export const getUser = async (req, res) => {
   try {
